@@ -1,0 +1,91 @@
+.adlam-display {
+    font-family: "ADLaM Display", serif;
+   
+  }
+
+
+
+
+  /* Style for the icon button */
+.icon-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Dropdown container */
+  .icon-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown menu (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 150px;
+    z-index: 1;
+  }
+  
+  /* Dropdown item styles */
+  .dropdown-content a {
+    padding: 12px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  
+  .dropdown-content a:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #007bff;
+  }
+  
+  /* Show the dropdown when hovering over the icon */
+  .icon-dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  
+#big-card{
+    background-color: #F9DF8A;
+    background-image: url('../c1-assets/cute-pet-small.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 400px;
+  
+}
+
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+      border-color: transparent;
+  }
+}
+
+.typing {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  display: inline-block;
+ /* animation: typing 3s steps(40, end) infinite, blink 0.7s infinite; */
+ animation: typing 3s steps(100, end) infinite alternate, blink 0.8s step-end infinite;
+}

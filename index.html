@@ -1,104 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B11-A3-Living-Lab</title>
+    <title>Living Lab</title>
+    <link rel="stylesheet" href="styles/style.css">
 
-    <!-- font awesome  cdn  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- google font cdn -->
+    <!-- google font CDN  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <style>
-        .sora-font {
-            font-family: "Sora", serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-        }
-        .display-font {
-            font-family: "ADLaM Display", serif;
-            font-weight: 400;
-        }
-        
-    </style>
-    
-    <!-- daisyui cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+
+    <!-- tailwind AND Daisy UI CDN  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- tailwind css cdn -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome cdn  -->
+     <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <!-- tailwind JS File  -->
     <script>
         tailwind.config = {
           theme: {
             extend: {
               colors: {
-                'primary-bg': '#F9DF8A',
-                'secondary-bg': '#FFF9F4',
-                'btn-bg': '#FFDC26',
+                clifford: '#da373d',       
+                'primary':'#FFDC26',
+                'bg-color': '#FFF9F4',
+                'secondary':'#F9DF8A'
               }
             }
           }
         }
     </script>
-</head>
-<body class=" sora-font">
-    <header>
+    <link rel="shortcut icon" href="c1-assets/logo-header.png" type="image/x-icon">
 
-        <!-- navbar section -->
-        <nav class="bg-secondary-bg px-4 py-3">
-            <div class="flex items-center justify-between md:max-w-7xl md:mx-auto">
-                <div class="flex items-center mx-auto md:mx-0 gap-64 md:gap-0">
-                    <div class="flex items-center gap-3">
-                        <img src="c1-assets/logo-header.png" alt="">
-                        <h4 class="sora-font text-[26px] hidden md:block">Browse<span class="text-btn-bg">4</span>Pets</h4>
-                    </div>
-                    <div class="md:hidden">
-                        <i class="text-3xl fa-solid fa-bars"></i> 
-                    </div>
+</head>
+<body class="adlam-display">
+    <header class=" h-[500px] lg:h-[1100px]">
+
+
+
+
+
+        <nav class="fixed mx-auto top-0 left-0 w-full z-50 bg-bg-color shadow-md">
+            <div class="navbar container mx-auto flex items-center justify-between">
+                <!-- Left Side (Logo) -->
+                <div class="navbar-start flex items-center">
+                    <img src="c1-assets/logo-header.png" alt="Logo" class="h-10">
                 </div>
-                <div class=" hidden lg:flex">
-                    <ul class="space-x-6 menu-horizontal ">
-                        <li class="hover:text-btn-bg text-xl text-black sora-font cursor-pointer"><a>Find a pet</a></li>
-                        <li class="hover:text-btn-bg text-xl text-black sora-font cursor-pointer "><a>Breeds</a></li>
-                        <li class="hover:text-btn-bg text-xl text-black sora-font cursor-pointer"><a>Contact us</a></li>
+        
+                <!-- Center Section for Large Screens -->
+                <div class="navbar-center hidden sm:flex text-2xl">
+                    <ul class="menu menu-horizontal px-1 flex items-center space-x-4">
+                        <li><a href="#">Find a Pet</a></li>
+                        <li><a href="#">Breeds</a></li>
+                        <li><a href="#">Subscription Plan</a></li>
+                        <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
-                <div class=" hidden md:block space-x-4">
-                    <i class=" text-2xl cursor-pointer fa-regular fa-bell"></i>
-                    <i class="text-2xl cursor-pointer fa-solid fa-magnifying-glass"></i>
-                    <a class=" border hover:bg-btn-bg border-primary-bg cursor-pointer text-black px-7 py-2 text-xl rounded-lg btn-warning">Login</a>
-                    <a class="hover:bg-[#f4d539] cursor-pointer px-7 py-2 text-black text-xl  bg-btn-bg rounded-lg">Register</a>
+        
+                <!-- Right Section for Large Screens (Login & Register) -->
+                <div class="navbar-end hidden sm:flex items-center gap-4">
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <a class="btn bg-bg-color border-primary hover:bg-primary hover:border-none rounded-[10px]">Login</a>
+                    <a class="btn bg-primary hover:bg-bg-color hover:border hover:border-primary rounded-[10px]">Register</a>
+                </div>
+        
+                <!-- Right Side (Dropdown Menu for Mobile) -->
+                <div class="navbar-end sm:hidden flex items-center">
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0" class="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow bg-bg-color">
+                            <li><a href="#">Find a Pet</a></li>
+                            <li><a href="#">Breeds</a></li>
+                            <li><a href="#">Subscription Plan</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
-        <hr class="md:hidden border-gray-200">
-         
-        <!-- banner section -->
-        <section class="block md:hidden mt-10">
-            <div class="mx-4 z-10">
-                <h1 class="md:leading-[70px] display-font text-3xl md:text-6xl  md:pt-6 mb-4">Pamper Your Pet, <br> Because They Deserve <br> the Bes</h1>
-                <p class="sora-font md:w-1/2 text-[16px] md:text-xl text-black mb-6">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
-                <button class="animate-bounce hover:bg-[#f4d539] sora-font cursor-pointer px-7 py-2 text-black text-[16px] md:text-xl  bg-btn-bg rounded-lg">Find a pet</button>
-            </div>
-            <img src="c1-assets/cat-big.png" alt="">
-        </section>
-        <section class="hidden md:block mt-7 md:mt-16 md:max-w-7xl mx-auto">
-            <div 
-            class=" p-4 min-h-screen"
-            style="background-image: url(c1-assets/cat-big.png);width: 100%;">
-                <div>
-                    <h1 class="md:leading-[70px] display-font text-3xl md:text-6xl  md:pt-6 mb-4">Pamper Your Pet, <br> Because They Deserve <br> the Bes</h1>
-                    <p class="sora-font md:w-1/2 text-[16px] md:text-xl text-black mb-6">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
-                    <button class="animate-bounce hover:bg-[#f4d539] sora-font cursor-pointer px-7 py-2 text-black text-[16px] md:text-xl  bg-btn-bg rounded-lg">Find a pet</button>
+        
+        
+       <!-- banner section design  -->
+        <div class="container mx-auto my-20 sm:mt-12 lg:mt-24">
+            <!-- text section -->
+            <div class="container mx-auto sm:mt-8 lg:mt-24">
+                <!-- text section -->
+                <div class="relative z-20 sm:px-4">
+                    <h1 class="text-[30px] lg:text-[56px] typing">Pamper Your Pet, <br> Because They Deserve <br>the Best</h1>
+                    <p class="text-gray-400">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
+                    <button class="btn bg-primary hover:bg-bg-color hover:border hover:border-primary rounded-[10px] mt-[20px]">Find a pet</button>
+                </div>
+            
+                <div class="relative -top-[120px] lg:-top-[360px] lg:left-[100px] sm:left-0 sm:top-0">
+                    <img src="c1-assets/cat-big.png" alt="">
                 </div>
             </div>
-        </section>
+        </div>
+
 
     </header>
 
-</body>
+    <main >
+
+        <!-- browse section  -->
+        <section class="container mx-auto my-0  ">
+            <h1 class="text-[24px] lg:text-[36px]">Browse by Categories</h1>
+            <div class="my-0 grid grid-cols-2 grid-rows-4 gap-3 lg:flex lg:justify-between mt-[30px] sm:grid-cols-1 md:grid-cols-2 lg:h-auto ">
+                <div class="card bg-secondary w-[175px] lg:w-[200px] shadow-xl hover:bg-primary hover:scale-105 transition duration-300 ease-in-out">
+                    <figure class="px-2 pt-4">
+                        <img src="c1-assets/dog-cartoon.png" alt="Dog" class="p-10 bg-white rounded-[75px]" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Dog</h2>
+                        <p>3 items</p>
+                    </div>
+                </div>
+        
+                <div class="card bg-secondary w-[175px] lg:w-[200px] shadow-xl hover:bg-primary hover:scale-105 transition duration-300 ease-in-out">
+                    <figure class="px-2 pt-4">
+                        <img src="c1-assets/fish-cartoon.png" alt="Fish" class="p-10 bg-white rounded-[75px]" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Fish</h2>
+                        <p>3 items</p>
+                    </div>
+                </div>
+        
+                <div class="card bg-secondary w-[175px] lg:w-[200px] shadow-xl hover:bg-primary hover:scale-105 transition duration-300 ease-in-out">
+                    <figure class="px-2 pt-4">
+                        <img src="c1-assets/cat-cartoon.png" alt="Cat" class="p-10 bg-white rounded-[75px]" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Cat</h2>
+                        <p>3 items</p>
+                    </div>
+                </div>
+        
+                <div class="card bg-secondary w-[175px] lg:w-[200px] shadow-xl hover:bg-primary hover:scale-105 transition duration-300 ease-in-out">
+                    <figure class="px-2 pt-4">
+                        <img src="c1-assets/bird-cartoon.png" alt="Bird" class="p-10 bg-white rounded-[75px]" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Birds</h2>
+                        <p>3 items</p>
+                    </div>
+                </div>
+        
+                <div class="card bg-secondary w-[175px] lg:w-[200px] shadow-xl hover:bg-primary hover:scale-105 transition duration-300 ease-in-out">
+                    <figure class="px-2 pt-4">
+                        <img src="c1-assets/mouse-cartoon.png" alt="Small Pet" class="p-10 bg-white rounded-[75px]" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Small Pet</h2>
+                        <p>3 items</p>
+                    </div>
+                </div>
+        
+                <div class="card bg-secondary w-[175px] lg:w-[200px] shadow-xl hover:bg-primary hover:scale-105 transition duration-300 ease-in-out">
+                    <figure class="px-2 pt-4">
+                        <img src="c1-assets/rabbit-cartoon.png" alt="Rabbit" class="p-10 bg-white rounded-[75px]" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Rabbit</h2>
+                        <p>3 items</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+
+
+    </main>
+   
+    <footer class="footer bg-secondary text-base-content pt-10 pl-10 pb-20 lg:p-10 lg:pt-[300px]">
+        <div>
+            
+        </div>
+        <nav>
+            <div class="flex items-center gap-4">
+                <div><img src="c1-assets/logo-footer.png" alt=""></div>
+                <div>
+                    <h1>Browse <span class="text-primary">4</span> Pets</h1>
+                </div>
+            </div>
+            <div>
+                <p>Discover a world of treats, toys, and essentials handpicked for your furry friends</p>
+            </div>
+            
+        </nav>
+        <nav>
+          
+          <a class="link link-hover">Find a pet</a>
+          <a class="link link-hover">Breeds</a>
+          <a class="link link-hover">Contact us </a>
+         
+        </nav>
+        <nav>
+          <h6 class="footer-title">Follow us</h6>
+          <div class="grid grid-flow-col gap-4">
+            <a>
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a>
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a>
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a >
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </nav>
+      </footer>
+
 </html>
+
