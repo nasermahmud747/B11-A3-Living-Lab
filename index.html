@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B11-A3-Living-Lab</title>
+
+    <!-- font awesome  cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+        .sora-font {
+            font-family: "Sora", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+        }
+        .display-font {
+            font-family: "ADLaM Display", serif;
+            font-weight: 400;
+        }
+        
+    </style>
+    
+    <!-- daisyui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwind css cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'primary-bg': '#F9DF8A',
+                'secondary-bg': '#FFF9F4',
+                'btn-bg': '#FFDC26',
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class=" sora-font">
+    <header>
+
+        <!-- navbar section -->
+        <nav class="bg-secondary-bg px-4 py-3">
+            <div class="flex items-center justify-between md:max-w-7xl md:mx-auto">
+                <div class="flex items-center mx-auto md:mx-0 gap-64 md:gap-0">
+                    <div class="flex items-center gap-3">
+                        <img src="c1-assets/logo-header.png" alt="">
+                        <h4 class="sora-font text-[26px] hidden md:block">Browse<span class="text-btn-bg">4</span>Pets</h4>
+                    </div>
+                    <div class="md:hidden">
+                        <i class="text-3xl fa-solid fa-bars"></i> 
+                    </div>
+                </div>
+                <div class=" hidden lg:flex">
+                    <ul class="space-x-6 menu-horizontal ">
+                        <li class="hover:text-btn-bg text-xl text-black sora-font cursor-pointer"><a>Find a pet</a></li>
+                        <li class="hover:text-btn-bg text-xl text-black sora-font cursor-pointer "><a>Breeds</a></li>
+                        <li class="hover:text-btn-bg text-xl text-black sora-font cursor-pointer"><a>Contact us</a></li>
+                    </ul>
+                </div>
+                <div class=" hidden md:block space-x-4">
+                    <i class=" text-2xl cursor-pointer fa-regular fa-bell"></i>
+                    <i class="text-2xl cursor-pointer fa-solid fa-magnifying-glass"></i>
+                    <a class=" border hover:bg-btn-bg border-primary-bg cursor-pointer text-black px-7 py-2 text-xl rounded-lg btn-warning">Login</a>
+                    <a class="hover:bg-[#f4d539] cursor-pointer px-7 py-2 text-black text-xl  bg-btn-bg rounded-lg">Register</a>
+                </div>
+            </div>
+        </nav>
+        <hr class="md:hidden border-gray-200">
+         
+        <!-- banner section -->
+        <section class="block md:hidden mt-10">
+            <div class="mx-4 z-10">
+                <h1 class="md:leading-[70px] display-font text-3xl md:text-6xl  md:pt-6 mb-4">Pamper Your Pet, <br> Because They Deserve <br> the Bes</h1>
+                <p class="sora-font md:w-1/2 text-[16px] md:text-xl text-black mb-6">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
+                <button class="animate-bounce hover:bg-[#f4d539] sora-font cursor-pointer px-7 py-2 text-black text-[16px] md:text-xl  bg-btn-bg rounded-lg">Find a pet</button>
+            </div>
+            <img src="c1-assets/cat-big.png" alt="">
+        </section>
+        <section class="hidden md:block mt-7 md:mt-16 md:max-w-7xl mx-auto">
+            <div 
+            class=" p-4 min-h-screen"
+            style="background-image: url(c1-assets/cat-big.png);width: 100%;">
+                <div>
+                    <h1 class="md:leading-[70px] display-font text-3xl md:text-6xl  md:pt-6 mb-4">Pamper Your Pet, <br> Because They Deserve <br> the Bes</h1>
+                    <p class="sora-font md:w-1/2 text-[16px] md:text-xl text-black mb-6">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
+                    <button class="animate-bounce hover:bg-[#f4d539] sora-font cursor-pointer px-7 py-2 text-black text-[16px] md:text-xl  bg-btn-bg rounded-lg">Find a pet</button>
+                </div>
+            </div>
+        </section>
+
+    </header>
+
+</body>
+</html>
